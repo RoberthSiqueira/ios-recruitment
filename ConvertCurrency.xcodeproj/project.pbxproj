@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		1D0BD8C323196D0C00E62904 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0BD8C223196D0C00E62904 /* AppDelegate.swift */; };
-		1D0BD8C523196D0C00E62904 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0BD8C423196D0C00E62904 /* ViewController.swift */; };
-		1D0BD8C823196D0C00E62904 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D0BD8C623196D0C00E62904 /* Main.storyboard */; };
+		1D0BD8C523196D0C00E62904 /* ConvertCurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0BD8C423196D0C00E62904 /* ConvertCurrencyViewController.swift */; };
+		1D0BD8C823196D0C00E62904 /* ConvertCurrency.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D0BD8C623196D0C00E62904 /* ConvertCurrency.storyboard */; };
 		1D0BD8CA23196D0C00E62904 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D0BD8C923196D0C00E62904 /* Assets.xcassets */; };
 		1D0BD8CD23196D0C00E62904 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D0BD8CB23196D0C00E62904 /* LaunchScreen.storyboard */; };
 		1D0BD8D823196D0C00E62904 /* ConvertCurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0BD8D723196D0C00E62904 /* ConvertCurrencyTests.swift */; };
+		1D12E26C231991D300C5F195 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5B2CEB231991650026B2EC /* RxSwift.framework */; };
+		1D12E26D231991D300C5F195 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5B2CEB231991650026B2EC /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1D5B2CEA23198D040026B2EC /* ConvertCurrencyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5B2CE923198D040026B2EC /* ConvertCurrencyViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,17 +28,34 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1D12E26E231991D300C5F195 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1D12E26D231991D300C5F195 /* RxSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1D0BD8BF23196D0C00E62904 /* ConvertCurrency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConvertCurrency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D0BD8C223196D0C00E62904 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1D0BD8C423196D0C00E62904 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1D0BD8C723196D0C00E62904 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1D0BD8C423196D0C00E62904 /* ConvertCurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertCurrencyViewController.swift; sourceTree = "<group>"; };
+		1D0BD8C723196D0C00E62904 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ConvertCurrency.storyboard; sourceTree = "<group>"; };
 		1D0BD8C923196D0C00E62904 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D0BD8CC23196D0C00E62904 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D0BD8CE23196D0C00E62904 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D0BD8D323196D0C00E62904 /* ConvertCurrencyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConvertCurrencyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D0BD8D723196D0C00E62904 /* ConvertCurrencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertCurrencyTests.swift; sourceTree = "<group>"; };
 		1D0BD8D923196D0C00E62904 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D5B2CE923198D040026B2EC /* ConvertCurrencyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertCurrencyViewModel.swift; sourceTree = "<group>"; };
+		1D5B2CEB231991650026B2EC /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxSwift.framework; sourceTree = "<group>"; };
+		1D5B2CEC231991660026B2EC /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D12E26C231991D300C5F195 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +83,7 @@
 				1D0BD8C123196D0C00E62904 /* ConvertCurrency */,
 				1D0BD8D623196D0C00E62904 /* ConvertCurrencyTests */,
 				1D0BD8C023196D0C00E62904 /* Products */,
+				1D5B2CF2231991810026B2EC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +99,9 @@
 		1D0BD8C123196D0C00E62904 /* ConvertCurrency */ = {
 			isa = PBXGroup;
 			children = (
-				1D0BD8C223196D0C00E62904 /* AppDelegate.swift */,
-				1D0BD8C423196D0C00E62904 /* ViewController.swift */,
-				1D0BD8C623196D0C00E62904 /* Main.storyboard */,
-				1D0BD8C923196D0C00E62904 /* Assets.xcassets */,
-				1D0BD8CB23196D0C00E62904 /* LaunchScreen.storyboard */,
-				1D0BD8CE23196D0C00E62904 /* Info.plist */,
+				1D5B2CE723198C650026B2EC /* Modules */,
+				1D0BD8E3231986CE00E62904 /* SupportFiles */,
+				1D0BD8E22319868300E62904 /* Resources */,
 			);
 			path = ConvertCurrency;
 			sourceTree = "<group>";
@@ -96,6 +115,75 @@
 			path = ConvertCurrencyTests;
 			sourceTree = "<group>";
 		};
+		1D0BD8E22319868300E62904 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1D0BD8CB23196D0C00E62904 /* LaunchScreen.storyboard */,
+				1D0BD8C923196D0C00E62904 /* Assets.xcassets */,
+				1D0BD8CE23196D0C00E62904 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1D0BD8E3231986CE00E62904 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				1D0BD8C223196D0C00E62904 /* AppDelegate.swift */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		1D0BD8E4231987E100E62904 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1D0BD8C623196D0C00E62904 /* ConvertCurrency.storyboard */,
+				1D0BD8C423196D0C00E62904 /* ConvertCurrencyViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1D0BD8E5231987F600E62904 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1D5B2CE923198D040026B2EC /* ConvertCurrencyViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1D0BD8E62319880700E62904 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1D5B2CE723198C650026B2EC /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1D5B2CE823198C770026B2EC /* ConvertCurrency */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		1D5B2CE823198C770026B2EC /* ConvertCurrency */ = {
+			isa = PBXGroup;
+			children = (
+				1D0BD8E4231987E100E62904 /* View */,
+				1D0BD8E5231987F600E62904 /* ViewModel */,
+				1D0BD8E62319880700E62904 /* Model */,
+			);
+			path = ConvertCurrency;
+			sourceTree = "<group>";
+		};
+		1D5B2CF2231991810026B2EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D5B2CEC231991660026B2EC /* RxCocoa.framework */,
+				1D5B2CEB231991650026B2EC /* RxSwift.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,6 +194,7 @@
 				1D0BD8BB23196D0C00E62904 /* Sources */,
 				1D0BD8BC23196D0C00E62904 /* Frameworks */,
 				1D0BD8BD23196D0C00E62904 /* Resources */,
+				1D12E26E231991D300C5F195 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -179,7 +268,7 @@
 			files = (
 				1D0BD8CD23196D0C00E62904 /* LaunchScreen.storyboard in Resources */,
 				1D0BD8CA23196D0C00E62904 /* Assets.xcassets in Resources */,
-				1D0BD8C823196D0C00E62904 /* Main.storyboard in Resources */,
+				1D0BD8C823196D0C00E62904 /* ConvertCurrency.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +286,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D0BD8C523196D0C00E62904 /* ViewController.swift in Sources */,
+				1D0BD8C523196D0C00E62904 /* ConvertCurrencyViewController.swift in Sources */,
 				1D0BD8C323196D0C00E62904 /* AppDelegate.swift in Sources */,
+				1D5B2CEA23198D040026B2EC /* ConvertCurrencyViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,12 +311,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1D0BD8C623196D0C00E62904 /* Main.storyboard */ = {
+		1D0BD8C623196D0C00E62904 /* ConvertCurrency.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1D0BD8C723196D0C00E62904 /* Base */,
 			);
-			name = Main.storyboard;
+			name = ConvertCurrency.storyboard;
 			sourceTree = "<group>";
 		};
 		1D0BD8CB23196D0C00E62904 /* LaunchScreen.storyboard */ = {
@@ -362,7 +452,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7YJX4KHH77;
-				INFOPLIST_FILE = ConvertCurrency/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/ConvertCurrency/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -380,7 +475,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7YJX4KHH77;
-				INFOPLIST_FILE = ConvertCurrency/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/ConvertCurrency/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
