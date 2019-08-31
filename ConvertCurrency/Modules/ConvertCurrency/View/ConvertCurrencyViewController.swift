@@ -12,23 +12,33 @@ import RxCocoa
 
 class ConvertCurrencyViewController: UIViewController {
   
+  // MARK: - Outlets
   @IBOutlet weak var descLabel: UILabel!
   @IBOutlet weak var consultedLabel: UILabel!
   @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+  @IBOutlet weak var dollarTextField: UITextField!
+  @IBOutlet weak var realTextFIeld: UITextField!
   
-  public var currency = PublishSubject<Currency>()
+  // MARK: - Class properties
   private let disposeBag = DisposeBag()
-  
-  var convertCurrencyVM = ConvertCurrencyViewModel()
-  
   private enum Strings {
     static let desc = "1 dólar Americano é igual a %@ real Brasileiro"
   }
   
+  // MARK: - Public properties
+  var convertCurrencyVM = ConvertCurrencyViewModel()
+  
+  // MARK: - Life cicle
   override func viewDidLoad() {
     super.viewDidLoad()
+    configView()
     setupBind()
     convertCurrencyVM.requestBaseCurrency()
+  }
+  
+  private func configView() {
+    dollarTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+    realTextFIeld.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
   }
   
   private func setupBind() {
@@ -48,5 +58,23 @@ class ConvertCurrencyViewController: UIViewController {
       .asObserver()
       .bind(to: consultedLabel.rx.text)
       .disposed(by: disposeBag)
+  }
+  
+  @objc private func textFieldDidChange(_ textField: UITextField) {
+    guard let text = textField.text, let number = text.toRawNumber() else {
+      dollarTextField.text = ""
+      realTextFIeld.text = ""
+      return
+    }
+    switch textField {
+    case dollarTextField:
+      textField.text = text.currencyInputFormatting(localeIdentifier: "en_US")
+      realTextFIeld.text = convertCurrencyVM.dollarToReal(value: number)
+    case realTextFIeld:
+      textField.text = text.currencyInputFormatting(localeIdentifier: "pt_BR")
+      dollarTextField.text = convertCurrencyVM.realToDollar(value: number)
+    default:
+      break
+    }
   }
 }

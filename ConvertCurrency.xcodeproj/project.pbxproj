@@ -23,8 +23,9 @@
 		1DB007DF231AE43500E8DD2E /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1DB007DD231AE43500E8DD2E /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1DB007E0231AE48400E8DD2E /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5B2CEC231991660026B2EC /* RxCocoa.framework */; };
 		1DB007E1231AE48400E8DD2E /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5B2CEC231991660026B2EC /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1DB007E4231AE88B00E8DD2E /* Double+Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB007E3231AE88B00E8DD2E /* Double+Currency.swift */; };
+		1DB007E4231AE88B00E8DD2E /* Double+Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB007E3231AE88B00E8DD2E /* Double+Round.swift */; };
 		1DB007E6231AF19D00E8DD2E /* String+DateBr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB007E5231AF19D00E8DD2E /* String+DateBr.swift */; };
+		1DB007E8231B06EA00E8DD2E /* String+Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB007E7231B06EA00E8DD2E /* String+Number.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,8 +72,9 @@
 		1DB007D9231AC01D00E8DD2E /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
 		1DB007DB231AD54800E8DD2E /* RatesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesModel.swift; sourceTree = "<group>"; };
 		1DB007DD231AE43500E8DD2E /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxRelay.framework; sourceTree = "<group>"; };
-		1DB007E3231AE88B00E8DD2E /* Double+Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Currency.swift"; sourceTree = "<group>"; };
+		1DB007E3231AE88B00E8DD2E /* Double+Round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Round.swift"; sourceTree = "<group>"; };
 		1DB007E5231AF19D00E8DD2E /* String+DateBr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+DateBr.swift"; sourceTree = "<group>"; };
+		1DB007E7231B06EA00E8DD2E /* String+Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Number.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,8 +221,9 @@
 		1DB007E2231AE87100E8DD2E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				1DB007E3231AE88B00E8DD2E /* Double+Currency.swift */,
 				1DB007E5231AF19D00E8DD2E /* String+DateBr.swift */,
+				1DB007E3231AE88B00E8DD2E /* Double+Round.swift */,
+				1DB007E7231B06EA00E8DD2E /* String+Number.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -329,11 +332,12 @@
 			files = (
 				1DB007DA231AC01D00E8DD2E /* CurrencyModel.swift in Sources */,
 				1D12E2712319B6FF00C5F195 /* APIManager.swift in Sources */,
+				1DB007E8231B06EA00E8DD2E /* String+Number.swift in Sources */,
 				1D0BD8C523196D0C00E62904 /* ConvertCurrencyViewController.swift in Sources */,
 				1DB007DC231AD54800E8DD2E /* RatesModel.swift in Sources */,
 				1DB007E6231AF19D00E8DD2E /* String+DateBr.swift in Sources */,
 				1D0BD8C323196D0C00E62904 /* AppDelegate.swift in Sources */,
-				1DB007E4231AE88B00E8DD2E /* Double+Currency.swift in Sources */,
+				1DB007E4231AE88B00E8DD2E /* Double+Round.swift in Sources */,
 				1D5B2CEA23198D040026B2EC /* ConvertCurrencyViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,7 +20,7 @@ class APIManager {
     var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false)
     urlComponents?.queryItems = [
       URLQueryItem(name: "base", value: "USD"),
-      URLQueryItem(name: "symbols", value: "USD,BRL")
+      URLQueryItem(name: "symbols", value: "BRL")
     ]
     
     guard let urlToRequest = urlComponents?.url else { return }
