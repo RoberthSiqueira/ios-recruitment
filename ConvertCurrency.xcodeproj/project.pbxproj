@@ -17,6 +17,7 @@
 		1D12E26D231991D300C5F195 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5B2CEB231991650026B2EC /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1D12E2712319B6FF00C5F195 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D12E2702319B6FF00C5F195 /* APIManager.swift */; };
 		1D5B2CEA23198D040026B2EC /* ConvertCurrencyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5B2CE923198D040026B2EC /* ConvertCurrencyViewModel.swift */; };
+		1DB007DA231AC01D00E8DD2E /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB007D9231AC01D00E8DD2E /* CurrencyModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		1D5B2CE923198D040026B2EC /* ConvertCurrencyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertCurrencyViewModel.swift; sourceTree = "<group>"; };
 		1D5B2CEB231991650026B2EC /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxSwift.framework; sourceTree = "<group>"; };
 		1D5B2CEC231991660026B2EC /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = "<group>"; };
+		1DB007D9231AC01D00E8DD2E /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 		1D0BD8E62319880700E62904 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1DB007D9231AC01D00E8DD2E /* CurrencyModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DB007DA231AC01D00E8DD2E /* CurrencyModel.swift in Sources */,
 				1D12E2712319B6FF00C5F195 /* APIManager.swift in Sources */,
 				1D0BD8C523196D0C00E62904 /* ConvertCurrencyViewController.swift in Sources */,
 				1D0BD8C323196D0C00E62904 /* AppDelegate.swift in Sources */,

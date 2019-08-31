@@ -12,21 +12,20 @@ class APIManager {
   static let baseURL = URL(string: "https://api.exchangeratesapi.io")
   typealias parameters = [String: Any]
   
-  static func requestData<T: Codable>(with url: String,
-                                      parameters: parameters?,
-                                      completion: @escaping (Result<T, Error>) -> ()) {
-    guard let url = baseURL?.appendingPathComponent(url) else { return }
+  static func requestData<T: Codable>(completion: @escaping (Result<T, Error>) -> ()) {
+    let resource = "latest"
     
-    var urlRequest = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10)
+    guard let url = baseURL?.appendingPathComponent(resource) else { return }
     
-    if let parameters = parameters {
-      let parameterData = parameters.reduce("") { (result, param) -> String in
-        return result + "&\(param.key)=\(param.value as! String)"
-        }.data(using: .utf8)
-      urlRequest.httpBody = parameterData
-    }
+    var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false)
+    urlComponents?.queryItems = [
+      URLQueryItem(name: "base", value: "BRL"),
+      URLQueryItem(name: "symbols", value: "USD,BRL")
+    ]
     
-    URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
+    guard let urlToRequest = urlComponents?.url else { return }
+    
+    URLSession.shared.dataTask(with: urlToRequest) { (data, response, error) in
       if let error = error {
         completion(.failure(error))
       }

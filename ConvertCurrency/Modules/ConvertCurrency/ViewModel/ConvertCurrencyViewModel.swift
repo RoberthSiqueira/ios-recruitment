@@ -14,15 +14,13 @@ protocol ConvertCurrencyViewModelProtocol {
 
 class ConvertCurrencyViewModel: ConvertCurrencyViewModelProtocol {
   func requestBaseCurrency() {
-    let url = "latest"
-    
-    APIManager.requestData(with: url, parameters: nil) { (response: Result<String, Error>) in
+    APIManager.requestData(completion: { (response: Result<Currency, Error>) in
       switch response {
-      case .success:
+      case .success(let rates):
         print("Success")
       case .failure:
         print("Failure")
       }
-    }
+    })
   }
 }
