@@ -19,7 +19,7 @@ class APIManager {
     
     var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false)
     urlComponents?.queryItems = [
-      URLQueryItem(name: "base", value: "BRL"),
+      URLQueryItem(name: "base", value: "USD"),
       URLQueryItem(name: "symbols", value: "USD,BRL")
     ]
     

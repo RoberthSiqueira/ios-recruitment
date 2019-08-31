@@ -9,5 +9,5 @@
 import Foundation
 
 struct Currency: Codable {
-  let rates: Dictionary<String, Double>
+  let BRL, USD: Double
 }

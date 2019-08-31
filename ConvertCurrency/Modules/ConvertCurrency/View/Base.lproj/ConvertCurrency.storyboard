@@ -18,20 +18,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Organized" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEo-so-noD">
-                                <rect key="frame" x="148" y="323" width="79" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dólar para Real" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OiG-8H-1PF">
+                                <rect key="frame" x="118.5" y="36" width="138" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 dólar Americano é igual a - real Brasileiro" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKk-fj-1Cm">
+                                <rect key="frame" x="16" y="85.5" width="343" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consultado em" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Cp-YD-6uo">
+                                <rect key="frame" x="16" y="113" width="109.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxT-PE-E9f">
+                                <rect key="frame" x="129.5" y="113" width="8" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="D0a-Jm-gLF">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="YEo-so-noD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PFu-Yb-Bhw"/>
-                            <constraint firstItem="YEo-so-noD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eOA-i3-LWg"/>
+                            <constraint firstItem="bxT-PE-E9f" firstAttribute="top" secondItem="mKk-fj-1Cm" secondAttribute="bottom" constant="8" id="0gb-Xf-RLl"/>
+                            <constraint firstItem="mKk-fj-1Cm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="E7K-5c-Mri"/>
+                            <constraint firstItem="2Cp-YD-6uo" firstAttribute="top" secondItem="mKk-fj-1Cm" secondAttribute="bottom" constant="8" id="Kjh-0d-NgF"/>
+                            <constraint firstItem="2Cp-YD-6uo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="RXf-NV-r78"/>
+                            <constraint firstItem="OiG-8H-1PF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dwE-xF-kIH"/>
+                            <constraint firstItem="D0a-Jm-gLF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eml-8v-DgC"/>
+                            <constraint firstItem="D0a-Jm-gLF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="i8O-OX-zmq"/>
+                            <constraint firstAttribute="trailing" secondItem="mKk-fj-1Cm" secondAttribute="trailing" constant="16" id="nII-yn-xY3"/>
+                            <constraint firstItem="OiG-8H-1PF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="oij-C5-kV2"/>
+                            <constraint firstItem="mKk-fj-1Cm" firstAttribute="top" secondItem="OiG-8H-1PF" secondAttribute="bottom" constant="24" id="rAo-ee-52l"/>
+                            <constraint firstItem="bxT-PE-E9f" firstAttribute="leading" secondItem="2Cp-YD-6uo" secondAttribute="trailing" constant="4" id="sDz-OQ-c03"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="consultedLabel" destination="bxT-PE-E9f" id="yk0-yl-VXv"/>
+                        <outlet property="descLabel" destination="mKk-fj-1Cm" id="AMB-b7-dhL"/>
+                        <outlet property="loadingIndicator" destination="D0a-Jm-gLF" id="8z0-jO-vXa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

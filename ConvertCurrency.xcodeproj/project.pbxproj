@@ -18,6 +18,13 @@
 		1D12E2712319B6FF00C5F195 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D12E2702319B6FF00C5F195 /* APIManager.swift */; };
 		1D5B2CEA23198D040026B2EC /* ConvertCurrencyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5B2CE923198D040026B2EC /* ConvertCurrencyViewModel.swift */; };
 		1DB007DA231AC01D00E8DD2E /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB007D9231AC01D00E8DD2E /* CurrencyModel.swift */; };
+		1DB007DC231AD54800E8DD2E /* RatesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB007DB231AD54800E8DD2E /* RatesModel.swift */; };
+		1DB007DE231AE43500E8DD2E /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DB007DD231AE43500E8DD2E /* RxRelay.framework */; };
+		1DB007DF231AE43500E8DD2E /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1DB007DD231AE43500E8DD2E /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1DB007E0231AE48400E8DD2E /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5B2CEC231991660026B2EC /* RxCocoa.framework */; };
+		1DB007E1231AE48400E8DD2E /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5B2CEC231991660026B2EC /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1DB007E4231AE88B00E8DD2E /* Double+Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB007E3231AE88B00E8DD2E /* Double+Currency.swift */; };
+		1DB007E6231AF19D00E8DD2E /* String+DateBr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB007E5231AF19D00E8DD2E /* String+DateBr.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +44,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				1DB007E1231AE48400E8DD2E /* RxCocoa.framework in Embed Frameworks */,
+				1DB007DF231AE43500E8DD2E /* RxRelay.framework in Embed Frameworks */,
 				1D12E26D231991D300C5F195 /* RxSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -60,6 +69,10 @@
 		1D5B2CEB231991650026B2EC /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxSwift.framework; sourceTree = "<group>"; };
 		1D5B2CEC231991660026B2EC /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = "<group>"; };
 		1DB007D9231AC01D00E8DD2E /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
+		1DB007DB231AD54800E8DD2E /* RatesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesModel.swift; sourceTree = "<group>"; };
+		1DB007DD231AE43500E8DD2E /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxRelay.framework; sourceTree = "<group>"; };
+		1DB007E3231AE88B00E8DD2E /* Double+Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Currency.swift"; sourceTree = "<group>"; };
+		1DB007E5231AF19D00E8DD2E /* String+DateBr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+DateBr.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DB007E0231AE48400E8DD2E /* RxCocoa.framework in Frameworks */,
+				1DB007DE231AE43500E8DD2E /* RxRelay.framework in Frameworks */,
 				1D12E26C231991D300C5F195 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,6 +122,7 @@
 				1D12E26F2319B69200C5F195 /* Network */,
 				1D0BD8E3231986CE00E62904 /* SupportFiles */,
 				1D0BD8E22319868300E62904 /* Resources */,
+				1DB007E2231AE87100E8DD2E /* Extensions */,
 			);
 			path = ConvertCurrency;
 			sourceTree = "<group>";
@@ -158,6 +174,7 @@
 		1D0BD8E62319880700E62904 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1DB007DB231AD54800E8DD2E /* RatesModel.swift */,
 				1DB007D9231AC01D00E8DD2E /* CurrencyModel.swift */,
 			);
 			path = Model;
@@ -192,10 +209,20 @@
 		1D5B2CF2231991810026B2EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1DB007DD231AE43500E8DD2E /* RxRelay.framework */,
 				1D5B2CEC231991660026B2EC /* RxCocoa.framework */,
 				1D5B2CEB231991650026B2EC /* RxSwift.framework */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		1DB007E2231AE87100E8DD2E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1DB007E3231AE88B00E8DD2E /* Double+Currency.swift */,
+				1DB007E5231AF19D00E8DD2E /* String+DateBr.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,7 +330,10 @@
 				1DB007DA231AC01D00E8DD2E /* CurrencyModel.swift in Sources */,
 				1D12E2712319B6FF00C5F195 /* APIManager.swift in Sources */,
 				1D0BD8C523196D0C00E62904 /* ConvertCurrencyViewController.swift in Sources */,
+				1DB007DC231AD54800E8DD2E /* RatesModel.swift in Sources */,
+				1DB007E6231AF19D00E8DD2E /* String+DateBr.swift in Sources */,
 				1D0BD8C323196D0C00E62904 /* AppDelegate.swift in Sources */,
+				1DB007E4231AE88B00E8DD2E /* Double+Currency.swift in Sources */,
 				1D5B2CEA23198D040026B2EC /* ConvertCurrencyViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
