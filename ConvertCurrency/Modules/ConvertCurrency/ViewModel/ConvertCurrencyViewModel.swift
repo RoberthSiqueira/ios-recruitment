@@ -41,7 +41,7 @@ class ConvertCurrencyViewModel: ConvertCurrencyViewModelProtocol {
   
   func dollarToReal(value: NSNumber) {
     let result = Double(truncating: value) * realValue
-    let resultStr = String(result.roundToDecimal(2)).currencyInputFormatting(localeIdentifier: "pt_BR")
+    let resultStr = String(result.roundToDecimal(2)).currencyInputFormatting(localeIdentifier: Constants.Languages.ptBR)
     if let real = resultStr {
       realTF.onNext(real)
     } else {
@@ -51,7 +51,7 @@ class ConvertCurrencyViewModel: ConvertCurrencyViewModelProtocol {
   
   func realToDollar(value: NSNumber) {
     let result = Double(truncating: value) / realValue
-    let resultStr = String(result.roundToDecimal(2)).currencyInputFormatting(localeIdentifier: "pt_BR")
+    let resultStr = String(result.roundToDecimal(2)).currencyInputFormatting(localeIdentifier: Constants.Languages.enUS)
     if let dollar = resultStr {
       dollarTF.onNext(dollar)
     } else {

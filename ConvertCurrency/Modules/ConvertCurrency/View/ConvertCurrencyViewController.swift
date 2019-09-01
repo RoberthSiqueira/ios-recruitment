@@ -78,10 +78,10 @@ class ConvertCurrencyViewController: UIViewController {
     }
     switch textField {
     case dollarTextField:
-      textField.text = text.currencyInputFormatting(localeIdentifier: "en_US")
+      textField.text = text.currencyInputFormatting(localeIdentifier: Constants.Languages.enUS)
       convertCurrencyVM.dollarToReal(value: number)
     case realTextFIeld:
-      textField.text = text.currencyInputFormatting(localeIdentifier: "pt_BR")
+      textField.text = text.currencyInputFormatting(localeIdentifier: Constants.Languages.ptBR)
       convertCurrencyVM.realToDollar(value: number)
     default:
       break
