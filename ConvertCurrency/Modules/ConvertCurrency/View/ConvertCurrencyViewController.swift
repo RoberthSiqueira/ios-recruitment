@@ -22,7 +22,7 @@ class ConvertCurrencyViewController: UIViewController {
   // MARK: - Class properties
   private let disposeBag = DisposeBag()
   private enum Strings {
-    static let desc = "1 dólar Americano é igual a %@ real Brasileiro"
+    static let desc = "1 dólar Americano é igual \na %@ real Brasileiro"
   }
   
   // MARK: - Public properties
@@ -37,8 +37,15 @@ class ConvertCurrencyViewController: UIViewController {
   }
   
   private func configView() {
-    dollarTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
-    realTextFIeld.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+    let textFields: [UITextField] = [dollarTextField, realTextFIeld]
+    textFields.forEach({
+      $0.layer.masksToBounds = false
+      $0.layer.shadowRadius = 1.0
+      $0.layer.shadowColor = UIColor.lightGray.cgColor
+      $0.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
+      $0.layer.shadowOpacity = 1.0
+      $0.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+    })
   }
   
   private func setupBind() {
