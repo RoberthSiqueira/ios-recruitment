@@ -37,6 +37,11 @@ class ConvertCurrencyViewController: UIViewController {
   }
   
   private func configView() {
+    setupToHideKeyboardOnTapOnView()
+    configTextFields()
+  }
+  
+  private func configTextFields() {
     let textFields: [UITextField] = [dollarTextField, realTextFIeld]
     textFields.forEach({
       $0.layer.masksToBounds = false
