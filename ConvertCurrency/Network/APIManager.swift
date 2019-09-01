@@ -30,8 +30,10 @@ class APIManager {
         completion(.failure(error))
       }
       do {
-        let response = try JSONDecoder().decode(T.self, from: data!)
-        completion(.success(response))
+        if let data = data {
+          let response = try JSONDecoder().decode(T.self, from: data)
+          completion(.success(response))
+        }
       } catch let err {
         completion(.failure(err))
       }

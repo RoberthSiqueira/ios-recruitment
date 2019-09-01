@@ -97,6 +97,55 @@ a - real Brasileiro</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WvW-lp-OGa" userLabel="Error View">
+                                <rect key="frame" x="0.0" y="89" width="375" height="578"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sad" translatesAutoresizingMaskIntoConstraints="NO" id="aOH-Yo-fGo">
+                                        <rect key="frame" x="147.5" y="153.5" width="80" height="80"/>
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="jb1-Bp-Drg"/>
+                                            <constraint firstAttribute="height" constant="80" id="jnh-tt-0Cy"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ops!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9w-RN-bK6">
+                                        <rect key="frame" x="167.5" y="249.5" width="40" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Algo deu errado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRA-Eg-2KE">
+                                        <rect key="frame" x="16" y="279" width="343" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="buN-KJ-sU3">
+                                        <rect key="frame" x="16" y="522" width="343" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="pb6-m0-qYn"/>
+                                        </constraints>
+                                        <state key="normal" title="Tentar novamente"/>
+                                        <connections>
+                                            <action selector="tryAgainAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d4X-o6-RbY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="buN-KJ-sU3" secondAttribute="bottom" constant="8" id="07A-MY-obK"/>
+                                    <constraint firstAttribute="trailing" secondItem="vRA-Eg-2KE" secondAttribute="trailing" constant="16" id="5an-d6-uCX"/>
+                                    <constraint firstItem="vRA-Eg-2KE" firstAttribute="top" secondItem="d9w-RN-bK6" secondAttribute="bottom" constant="8" id="6CF-YF-Csi"/>
+                                    <constraint firstItem="aOH-Yo-fGo" firstAttribute="centerX" secondItem="WvW-lp-OGa" secondAttribute="centerX" id="H5s-nL-r54"/>
+                                    <constraint firstAttribute="trailing" secondItem="buN-KJ-sU3" secondAttribute="trailing" constant="16" id="KWq-PN-dLp"/>
+                                    <constraint firstItem="vRA-Eg-2KE" firstAttribute="leading" secondItem="WvW-lp-OGa" secondAttribute="leading" constant="16" id="LG3-L5-UnK"/>
+                                    <constraint firstItem="vRA-Eg-2KE" firstAttribute="centerY" secondItem="WvW-lp-OGa" secondAttribute="centerY" id="ZWN-lz-D2U"/>
+                                    <constraint firstItem="d9w-RN-bK6" firstAttribute="centerX" secondItem="WvW-lp-OGa" secondAttribute="centerX" id="l3V-GN-Uv9"/>
+                                    <constraint firstItem="vRA-Eg-2KE" firstAttribute="centerX" secondItem="WvW-lp-OGa" secondAttribute="centerX" id="quP-0i-eEc"/>
+                                    <constraint firstItem="d9w-RN-bK6" firstAttribute="top" secondItem="aOH-Yo-fGo" secondAttribute="bottom" constant="16" id="uaG-VA-Lzo"/>
+                                    <constraint firstItem="buN-KJ-sU3" firstAttribute="leading" secondItem="WvW-lp-OGa" secondAttribute="leading" constant="16" id="wL3-n6-Tc0"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -108,6 +157,7 @@ a - real Brasileiro</string>
                             <constraint firstItem="BW6-2f-a2h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="PmC-45-RO9"/>
                             <constraint firstItem="mKk-fj-1Cm" firstAttribute="top" secondItem="75w-uz-EwH" secondAttribute="bottom" constant="20" id="PpA-KQ-ISo"/>
                             <constraint firstItem="2Cp-YD-6uo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="RXf-NV-r78"/>
+                            <constraint firstItem="WvW-lp-OGa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Sdv-h7-4lv"/>
                             <constraint firstItem="75w-uz-EwH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XlH-64-LnD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RP0-eW-zah" secondAttribute="trailing" constant="16" id="YSf-kS-9pb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BW6-2f-a2h" secondAttribute="trailing" constant="16" id="c82-NS-AKd"/>
@@ -117,8 +167,11 @@ a - real Brasileiro</string>
                             <constraint firstItem="D0a-Jm-gLF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="i8O-OX-zmq"/>
                             <constraint firstItem="RP0-eW-zah" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="kqo-5q-skb"/>
                             <constraint firstAttribute="trailing" secondItem="mKk-fj-1Cm" secondAttribute="trailing" constant="16" id="nII-yn-xY3"/>
+                            <constraint firstItem="WvW-lp-OGa" firstAttribute="top" secondItem="75w-uz-EwH" secondAttribute="bottom" id="oXl-NH-SDy"/>
                             <constraint firstItem="OiG-8H-1PF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="oij-C5-kV2"/>
                             <constraint firstItem="bxT-PE-E9f" firstAttribute="leading" secondItem="2Cp-YD-6uo" secondAttribute="trailing" constant="4" id="sDz-OQ-c03"/>
+                            <constraint firstItem="WvW-lp-OGa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="svO-II-lCz"/>
+                            <constraint firstItem="WvW-lp-OGa" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="tf6-Xq-8iY"/>
                             <constraint firstItem="75w-uz-EwH" firstAttribute="top" secondItem="OiG-8H-1PF" secondAttribute="bottom" id="up6-hs-mTS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -127,8 +180,10 @@ a - real Brasileiro</string>
                         <outlet property="consultedLabel" destination="bxT-PE-E9f" id="yk0-yl-VXv"/>
                         <outlet property="descLabel" destination="mKk-fj-1Cm" id="AMB-b7-dhL"/>
                         <outlet property="dollarTextField" destination="9Qa-Fu-346" id="2uT-lB-eqw"/>
+                        <outlet property="errorView" destination="WvW-lp-OGa" id="Wiq-K0-MEf"/>
                         <outlet property="loadingIndicator" destination="D0a-Jm-gLF" id="8z0-jO-vXa"/>
                         <outlet property="realTextFIeld" destination="gKz-3J-Q0Z" id="1gc-iT-1u0"/>
+                        <outlet property="tryAgainButton" destination="buN-KJ-sU3" id="ZtD-K9-Jiv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -136,4 +191,7 @@ a - real Brasileiro</string>
             <point key="canvasLocation" x="53.600000000000001" y="34.632683658170919"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sad" width="80" height="80"/>
+    </resources>
 </document>

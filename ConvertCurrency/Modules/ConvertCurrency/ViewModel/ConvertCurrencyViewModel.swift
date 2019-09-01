@@ -17,6 +17,7 @@ protocol ConvertCurrencyViewModelProtocol {
 
 class ConvertCurrencyViewModel: ConvertCurrencyViewModelProtocol {
   public let loading: PublishSubject<Bool> = PublishSubject()
+  public let errorLoading: PublishSubject<Bool> = PublishSubject()
   public let realString: PublishSubject<String> = PublishSubject()
   public let dateString: PublishSubject<String> = PublishSubject()
   public let realTF: PublishSubject<String> = PublishSubject()
@@ -34,7 +35,7 @@ class ConvertCurrencyViewModel: ConvertCurrencyViewModelProtocol {
         self.dateString.onNext(rates.date.formatYYYYMMDDDateString())
         self.realString.onNext(String(format: "%.2f", self.realValue).replacingOccurrences(of: ".", with: ","))
       case .failure:
-        print("Failure")
+        self.errorLoading.onNext(false)
       }
     })
   }

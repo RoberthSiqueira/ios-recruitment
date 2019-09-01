@@ -18,6 +18,8 @@ class ConvertCurrencyViewController: UIViewController {
   @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
   @IBOutlet weak var dollarTextField: UITextField!
   @IBOutlet weak var realTextFIeld: UITextField!
+  @IBOutlet weak var errorView: UIView!
+  @IBOutlet weak var tryAgainButton: UIButton!
   
   // MARK: - Class properties
   private let disposeBag = DisposeBag()
@@ -33,12 +35,13 @@ class ConvertCurrencyViewController: UIViewController {
     super.viewDidLoad()
     configView()
     setupBind()
-    convertCurrencyVM.requestBaseCurrency()
+    fetchCurrency()
   }
   
   private func configView() {
     setupToHideKeyboardOnTapOnView()
     configTextFields()
+    configButton()
   }
   
   private func configTextFields() {
@@ -53,13 +56,29 @@ class ConvertCurrencyViewController: UIViewController {
     })
   }
   
+  private func configButton() {
+    let blueColor = UIColor(red: 0.0, green: 122.0/255.0, blue: 1.0, alpha: 1.0)
+    tryAgainButton.setTitleColor(blueColor, for: .normal)
+    tryAgainButton.layer.masksToBounds = true
+    tryAgainButton.layer.cornerRadius = 8.0
+    tryAgainButton.layer.borderWidth = 1.0
+    tryAgainButton.layer.borderColor = blueColor.cgColor
+  }
+  
+  private func fetchCurrency() {
+    convertCurrencyVM.requestBaseCurrency()
+  }
+  
   private func setupBind() {
     convertCurrencyVM.loading
       .bind(to: loadingIndicator.rx.isAnimating)
       .disposed(by: disposeBag)
     
+    convertCurrencyVM.errorLoading
+      .bind(to: errorView.rx.isHidden)
+      .disposed(by: disposeBag)
+    
     convertCurrencyVM.realString
-      .asObserver()
       .map({ realValue -> String in
         return String(format: Strings.desc, realValue)
       })
@@ -67,7 +86,6 @@ class ConvertCurrencyViewController: UIViewController {
       .disposed(by: disposeBag)
     
     convertCurrencyVM.dateString
-      .asObserver()
       .bind(to: consultedLabel.rx.text)
       .disposed(by: disposeBag)
     
@@ -98,5 +116,11 @@ class ConvertCurrencyViewController: UIViewController {
     default:
       break
     }
+  }
+  
+  // MARK: - Actions
+  @IBAction func tryAgainAction(_ sender: UIButton) {
+    errorView.isHidden = true
+    fetchCurrency()
   }
 }
