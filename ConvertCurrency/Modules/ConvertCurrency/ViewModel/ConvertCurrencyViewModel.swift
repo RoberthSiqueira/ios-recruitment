@@ -11,14 +11,16 @@ import RxSwift
 
 protocol ConvertCurrencyViewModelProtocol {
   func requestBaseCurrency()
-  func dollarToReal(value: NSNumber) -> String
-  func realToDollar(value: NSNumber) -> String
+  func dollarToReal(value: NSNumber)
+  func realToDollar(value: NSNumber)
 }
 
 class ConvertCurrencyViewModel: ConvertCurrencyViewModelProtocol {
   public let loading: PublishSubject<Bool> = PublishSubject()
   public let realString: PublishSubject<String> = PublishSubject()
   public let dateString: PublishSubject<String> = PublishSubject()
+  public let realTF: PublishSubject<String> = PublishSubject()
+  public let dollarTF: PublishSubject<String> = PublishSubject()
   
   private var realValue: Double = 0.0
   
@@ -37,23 +39,23 @@ class ConvertCurrencyViewModel: ConvertCurrencyViewModelProtocol {
     })
   }
   
-  func dollarToReal(value: NSNumber) -> String {
+  func dollarToReal(value: NSNumber) {
     let result = Double(truncating: value) * realValue
     let resultStr = String(result.roundToDecimal(2)).currencyInputFormatting(localeIdentifier: "pt_BR")
     if let real = resultStr {
-      return real
+      realTF.onNext(real)
     } else {
-      return ""
+      realTF.onNext("")
     }
   }
   
-  func realToDollar(value: NSNumber) -> String {
+  func realToDollar(value: NSNumber) {
     let result = Double(truncating: value) / realValue
     let resultStr = String(result.roundToDecimal(2)).currencyInputFormatting(localeIdentifier: "pt_BR")
     if let dollar = resultStr {
-      return dollar
+      dollarTF.onNext(dollar)
     } else {
-      return ""
+      dollarTF.onNext("")
     }
   }
 }

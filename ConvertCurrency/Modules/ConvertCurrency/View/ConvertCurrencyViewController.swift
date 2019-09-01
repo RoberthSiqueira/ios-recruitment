@@ -58,6 +58,16 @@ class ConvertCurrencyViewController: UIViewController {
       .asObserver()
       .bind(to: consultedLabel.rx.text)
       .disposed(by: disposeBag)
+    
+    convertCurrencyVM.realTF
+      .asObserver()
+      .bind(to: realTextFIeld.rx.text)
+      .disposed(by: disposeBag)
+    
+    convertCurrencyVM.dollarTF
+      .asObserver()
+      .bind(to: dollarTextField.rx.text)
+      .disposed(by: disposeBag)
   }
   
   @objc private func textFieldDidChange(_ textField: UITextField) {
@@ -69,10 +79,10 @@ class ConvertCurrencyViewController: UIViewController {
     switch textField {
     case dollarTextField:
       textField.text = text.currencyInputFormatting(localeIdentifier: "en_US")
-      realTextFIeld.text = convertCurrencyVM.dollarToReal(value: number)
+      convertCurrencyVM.dollarToReal(value: number)
     case realTextFIeld:
       textField.text = text.currencyInputFormatting(localeIdentifier: "pt_BR")
-      dollarTextField.text = convertCurrencyVM.realToDollar(value: number)
+      convertCurrencyVM.realToDollar(value: number)
     default:
       break
     }
