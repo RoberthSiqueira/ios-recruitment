@@ -1,5 +1,5 @@
 # ios-recruitment
-Desafio Sympla
+Desafio Câmbio
 
 Carthage foi usado para a instalação de frameworks. Será necessário instala-lo.
 
